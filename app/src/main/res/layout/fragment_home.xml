@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="100dp"
+                android:text="inventaire"
+                android:textAlignment="center"
+                android:textSize="60sp"
+                tools:ignore="MissingConstraints" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="484dp">
+
+                <ImageButton
+                    android:id="@+id/Ceinture"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ceinture"
+                    android:translationX="110dp"
+                    android:translationY="400dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/AnneauGauche"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:src="@drawable/ringslots"
+                    android:translationX="20dp"
+                    android:translationY="400dp"
+                    android:translationZ="2dp"
+                    tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+                <ImageButton
+                    android:id="@+id/AnneauDroite"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:src="@drawable/ringslots"
+                    android:translationX="290dp"
+                    android:translationY="400dp"
+                    android:translationZ="2dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/Tpose"
+                    android:layout_width="380dp"
+                    android:layout_height="380dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/t_pose"
+                    android:translationX="5dp"
+                    android:translationY="0dp" />
+
+                <ImageButton
+                    android:id="@+id/ArmeGauche"
+                    android:layout_width="130dp"
+                    android:layout_height="250dp"
+                    android:backgroundTint="#5CFFFFFF"
+                    android:backgroundTintMode="src_in"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rectangle_vide"
+                    android:translationX="0dp"
+                    android:translationY="115dp"
+                    app:tint="#5C5C5C"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/ArmeDroite"
+                    android:layout_width="130dp"
+                    android:layout_height="250dp"
+                    android:backgroundTint="#5CFFFFFF"
+                    android:backgroundTintMode="src_in"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rectangle_vide"
+                    android:translationX="260dp"
+                    android:translationY="115dp"
+                    app:tint="#5C5C5C"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/Botte"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:backgroundTint="#5CFFFFFF"
+                    android:backgroundTintMode="src_in"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rectangle_vide"
+                    android:translationX="127dp"
+                    android:translationY="270dp"
+                    app:tint="#5C5C5C"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/Torse"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#5CFFFFFF"
+                    android:backgroundTintMode="src_in"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rectangle_vide"
+                    android:translationX="128dp"
+                    android:translationY="80dp"
+                    app:tint="#5C5C5C"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/GantGauche"
+                    android:layout_width="140dp"
+                    android:layout_height="93dp"
+                    android:backgroundTint="#5CFFFFFF"
+                    android:backgroundTintMode="src_in"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/rectangle_vide"
+                    android:translationY="35dp"
+                    app:tint="#5C5C5C"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/Haume"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:backgroundTint="#5CFFFFFF"
+                    android:backgroundTintMode="src_in"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rectangle_vide"
+                    android:translationX="152dp"
+                    android:translationY="0dp"
+                    app:tint="#5C5C5C"
+                    tools:ignore="DuplicateIds,SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/GantDroite"
+                    android:layout_width="140dp"
+                    android:layout_height="93dp"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="#5CFFFFFF"
+                    android:backgroundTintMode="src_in"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/rectangle_vide"
+                    android:translationY="35dp"
+                    app:tint="#5C5C5C"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/Collier"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/collier"
+                    android:translationX="200dp"
+                    android:translationY="400dp"
+                    tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+            </FrameLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/Inv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/Inv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center">
+
+                    <ImageButton
+                        android:id="@+id/Inv9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/Inv13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/Inv16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:src="@android:drawable/alert_dark_frame"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
