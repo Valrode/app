@@ -6,15 +6,19 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -33,9 +37,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.internal.Sleeper;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -57,6 +63,7 @@ public class MAIN extends AppCompatActivity {
     public ArrayList<Integer> Haume = new ArrayList<>(Arrays.asList(R.id.Haume));
     public ArrayList<Integer> Botte = new ArrayList<>(Arrays.asList(R.id.Botte));
     public ArrayList<Integer> Ceinture = new ArrayList<>(Arrays.asList(R.id.Ceinture));
+
     public ArrayList<Integer> KeyForDesc = new ArrayList<>();
     public int tempInc;
 
@@ -121,7 +128,21 @@ public class MAIN extends AppCompatActivity {
             }
         });
 
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(MAIN.this);
+
+        if(account != null){
+            NavigationView navView = (NavigationView) findViewById(R.id.nav_view);
+            View headerView = navView.getHeaderView(0);
+            String Name = account.getDisplayName();
+            String Email = account.getEmail();
+            Uri Image = account.getPhotoUrl();
+            ((TextView)headerView.findViewById(R.id.EmailUser)).setText(Email);
+            ((TextView)headerView.findViewById(R.id.NameUser)).setText(Name);
+            ((ImageView)headerView.findViewById(R.id.ImageUser)).setImageURI(Image);
+        }
+
         thread.start();
+
     }
 
     @Override
@@ -139,6 +160,7 @@ public class MAIN extends AppCompatActivity {
     }
 
     Thread thread = new Thread(new Runnable() {
+
         ImageButton ImageButton;
         Drawable Image;
         @Override
@@ -169,7 +191,19 @@ public class MAIN extends AppCompatActivity {
                                 ((ImageButton)findViewById(IDs.get(finalInc))).setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        GetIMG (Image,view,finalInc,ImageButton);
+                                        if (Image == null) {
+                                            Image = ((ImageButton)findViewById(IDs.get(finalInc))).getDrawable();
+                                            ImageButton = (ImageButton) findViewById(IDs.get(finalInc));
+                                            tempInc = finalInc;
+                                            PlaceItem(finalInc);
+
+                                        }
+                                        else {
+                                            ImageButton.setImageDrawable((((ImageButton) findViewById(IDs.get(finalInc))).getDrawable()));
+                                            ((ImageButton)findViewById(IDs.get(finalInc))).setImageDrawable(Image);
+                                            Image = null;
+                                            Collections.swap(KeyForDesc,tempInc,finalInc);
+                                        }
                                     }
                                 });
                                 data.getFile(test).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
@@ -207,27 +241,42 @@ public class MAIN extends AppCompatActivity {
         Popup_Builder.show();
     }
 
-    public void GetIMG (Drawable Image,View view,int finalInc,ImageButton ImageButton) {
-        if (Image == null) {
-            Image = ((ImageButton)findViewById(IDs.get(finalInc))).getDrawable();
-            ImageButton = (ImageButton) findViewById(IDs.get(finalInc));
-            tempInc = finalInc;
-            System.out.println(tempInc);
-        }
-        else {
-            ImageButton.setImageDrawable((((ImageButton) findViewById(IDs.get(finalInc))).getDrawable()));
-            ((ImageButton)findViewById(IDs.get(finalInc))).setImageDrawable(Image);
-            Image = null;
-            Collections.swap(KeyForDesc,tempInc,finalInc);
-        }
-    }
-
     public void SetIMG (File test,int finalInc) {
         try {
             Bitmap img = BitmapFactory.decodeFile(test.getAbsolutePath());
             ((ImageButton) findViewById(IDs.get(finalInc))).setImageBitmap(img);
         } catch (Exception e) {
             Toast.makeText(MAIN.this, "Error Loading Image", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    void PlaceItem (int finalInc) {
+        ArrayList<ArrayList> tempo = new ArrayList<>();
+        Drawable croix = getDrawable(R.drawable.croix);
+        switch (finalInc) {
+            case 2 :
+                for (int i:Ceinture) {
+                    Drawable CeintureTemp = ((ImageButton)findViewById(i)).getDrawable();
+                    ((ImageButton) findViewById(i)).setImageDrawable(croix);
+                }
+                for (int i:Anneaux) {
+                    Drawable AnneauxTemp = ((ImageButton)findViewById(i)).getDrawable();
+                    ((ImageButton) findViewById(i)).setImageDrawable(croix);
+                }
+                for (int i:Collier) {
+
+                    ImageButton Collier = findViewById(i);
+
+                    Collier.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View V) {
+                            Drawable IMGtemp = ((ImageButton)findViewById(IDs.get(finalInc))).getDrawable();
+                            Collier.setImageDrawable(IMGtemp);
+                            //((ImageButton)findViewById(IDs.get(finalInc))).setImageDrawable("@android:drawable/alert_dark_frame");
+                        }
+                    });
+
+                }
         }
     }
 }
