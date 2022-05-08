@@ -13,7 +13,7 @@
         android:contextClickable="true"
         android:elegantTextHeight="false"
         android:linksClickable="true"
-        android:autoLink="all"
+        android:autoLink="web"
         android:text="https://docs.google.com/document/d/1RcG8wxz98WyUlrt8O7HxayjVdBlNYhAkv3j_t9jeyfE/edit?usp=sharing"
         android:textAlignment="center"
         app:autoSizeTextType="uniform"

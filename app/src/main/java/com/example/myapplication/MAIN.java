@@ -256,11 +256,9 @@ public class MAIN extends AppCompatActivity {
         switch (finalInc) {
             case 2 :
                 for (int i:Ceinture) {
-                    Drawable CeintureTemp = ((ImageButton)findViewById(i)).getDrawable();
                     ((ImageButton) findViewById(i)).setImageDrawable(croix);
                 }
                 for (int i:Anneaux) {
-                    Drawable AnneauxTemp = ((ImageButton)findViewById(i)).getDrawable();
                     ((ImageButton) findViewById(i)).setImageDrawable(croix);
                 }
                 for (int i:Collier) {
@@ -271,8 +269,15 @@ public class MAIN extends AppCompatActivity {
                         @Override
                         public void onClick(View V) {
                             Drawable IMGtemp = ((ImageButton)findViewById(IDs.get(finalInc))).getDrawable();
+                            ((ImageButton)findViewById(IDs.get(finalInc))).setImageDrawable(Drawable.createFromPath("@android:drawable/alert_dark_frame"));
                             Collier.setImageDrawable(IMGtemp);
-                            //((ImageButton)findViewById(IDs.get(finalInc))).setImageDrawable("@android:drawable/alert_dark_frame");
+                            for (int i:Ceinture) {
+                                Drawable ceinture = Drawable.createFromPath("@android:drawable/ceinture.png");
+                                ((ImageButton) findViewById(i)).setImageDrawable(ceinture);
+                            }
+                            for (int i:Anneaux) {
+                                ((ImageButton) findViewById(i)).setImageDrawable(Drawable.createFromPath("@android:drawable/ringslot.png"));
+                            }
                         }
                     });
 
