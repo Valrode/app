@@ -6,17 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".ui.slideshow.SlideshowFragment">
 
-    <TextView
-        android:id="@+id/text_slideshow"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="650dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-75dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n Bienvenu dans l'onglet aide voyageur ! \n \n
+
+Ici, tu trouveras tout ce que tu dois savoir… \n \n
+
+L’écran de base est l’inventaire de ton personnage. Tu peux échanger le contenu des cases dans ton inventaire en cliquant sur l’une d’elle et sur une autre. Si tu veux avoir la description d’un objet, maintient ton clic sur la case d’on tu veux savoir le contenu. \n \n
+
+Tu as normalement 4 boutons en bas de ton écran : \n \n
+
+-le premier correspond à l’onglet des stats, tu peux y trouver toutes les informations sur ton personnage comme ses points de vie, ses points de mana, son statut, si ton personnage est empoisonné, endormie, etc. et bien sûr les caractéristiques ! \n \n
+
+-le second correspond à l’onglet des dés, tu peux y trouver les boutons qui permettent de lancer les dés. L'application additionne les dés tant que tu ne clic pas sur lancer les dés. Tu peux reset les dés choisis avec le bouton reset. \n \n
+
+-le troisième correspond à l’onglet sort, tu peux y trouver toute la description des sorts de ta classe. \n \n
+
+-le dernier correspond à l’onglet notebook, c’est tout simplement un bloc note où tu écris ce que tu veux, des informations importantes, des noms et etc. \n \n
+
+Si tu glisses ton doigt vers la droite, tu trouveras un tiroir où tu as pu trouver justement le bouton aide mais aussi le bouton sign out, le bouton inventaire et le bouton encyclopédie. \n \n
+
+Le bouton inventaire permet de revenir à l’écran de base, le bouton encyclopédie permet d’aller sur un google doc où tu peux trouver les informations sur le jeu de rôle, des descriptions des races au sort, des descriptions des caractéristiques, des informations sur l’univers où votre personnage se balade, et autre et infinité. Bref, tout ce que tu veux savoir telle une bible. Le bouton sign out permet de quitter ton compte si tu veux changer de compte car ton personnage est lié à ton compte. \n \n
+
+J’espère que cet onglet help va t’aider ! \n \n
+
+Amuse toi bien voyageur et émerveille toi dans ce monde merveilleux de fantasy ! \n\n "
+
+                android:textAlignment="center" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

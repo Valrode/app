@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -134,7 +135,7 @@ public class MAIN extends AppCompatActivity {
             Uri Image = account.getPhotoUrl();
             ((TextView)headerView.findViewById(R.id.EmailUser)).setText(Email);
             ((TextView)headerView.findViewById(R.id.NameUser)).setText(Name);
-            //((ImageView)headerView.findViewById(R.id.ImageUser)).setImageURI(Image);
+            ((ImageView)headerView.findViewById(R.id.ImageUser)).setImageURI(Image);
         }
 
         thread.start();
