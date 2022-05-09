@@ -12,6 +12,77 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+        android:text="Niveau 1 :
+Vision arcanique : (Passif)
+Effet :
+Permet d’activer une vision spéciale. Le mage voit le monde par le prisme de la magie. Tout élément magique apparaît clairement, là où le reste est légèrement plus flou.
+Cela peut servir à voir des éléments magiques invisibles, à identifier bien plus facilement une magie, ...
+→ +15 en Arcane pour analyser la magie
+→ +2 pour chaque lvl
+Condition : /
+
+Cercle de magie :
+Créer un espace magique autour du mage augmentant la régénération de magie des membres présents.
+Zone : Cercle de 5 mètres de rayon, centré sur le lanceur au moment du lancer.
+Effet : Le cercle reste pour 4 tours. Les membres présents ont +10 (+2 pour chaque lvl) à leur régénération de mana.
+Condition : 30 mana, Nécessite 2 tours complets sans interruption
+
+Canal éthéré :
+Permet un don de maximum 20 (choix) points de mana sur une cible au CàC
+OU Permet d’absorber 2d10 points de mana à une cible au CàC.
+→ plus 10 par lvl et +1dé10 par lvl
+Condition : /
+
+Protection runique :
+Créer une zone de protection autour du lanceur qui augmente les résistances magiques des alliés présents.
+Zone : Cercle d’1 mètre de rayon autours du lanceur (il se déplace avec le lanceur)
+Effet : Augmente les résistances magiques des membres alliés présents.
+	→ +2*lvl Résistance magique
+L’effet peut être amplifié mais ne réduira que pour un type de magie
+	→ +4*lvl Résistance magique pour le type en question
+Peut être maintenu, ce qui diminue son coût en mana. Le mage peut agir librement aux prochains tours dans ce cas.
+Condition : 25 mana puis 15 par tour maintenu
+
+Télépathie :
+Permet d’établir un lien mental avec les personnes qui le souhaitent.
+Effet : Les membres choisis sont liés mentalement et peuvent communiquer par la pensée, sans avoir à ouvrir la bouche. Le lien reste sur une assez grande distance, peu importe les obstacles entre les individus.
+Les joueurs peuvent donc communiquer entre eux même s' ils sont en situation de réflexions personnelles. Lors du lancer, offre également ~1 min de point stratégique.
+Condition : 30 mana +5 par personnage lié (hors lanceur). La durée dépend de la réussite.
+
+Enchantement élémentaire :
+ L’arme obtient une ligne de dégâts en plus dans l’élément du mage (au choix si plusieurs).
+Effet :
+L’arme inflige (1 + Bonus d’Intelligence) dégâts élémentaires en plus.
+LVL 3 : →L’arme inflige (3 + Bonus d’Intelligence*2) dégâts élémentaires en plus.
+LVL 5 : →L’arme inflige (5 + Bonus d’Intelligence*3) dégâts élémentaires en plus.
+
+Condition : 15 mana puis 5 par tour maintenu
+
+Niveau 2 :
+Géoformation :
+Remodèle la forme d’une surface faite de roche ou de terre. La forme est libre (Petits murs, pics, …). Peut également changer sa “composition” (Boueux, Accidenté, …)
+Condition : 25 mana, case en terre, roche, ...
+
+Bourrasque :
+Crée une forte bourrasque.
+Permet d’amortir une chute, de faire un grand bond, de déplacer des objets, voire des gens.
+Condition : 25 mana
+
+Feu follet :
+Fait apparaître 1 Feu-follet qui flotte autour du lanceur et peut également être déplacée d’un simple geste du mage. Celui-ci émet de la lumière et suit le personnage. Si une personne (amie comme ennemie) touche un feu follet, ce dernier est brûlé, reçoit 1 dégât feu et 3 faiblesses au feu, puis le feu follet disparaît. Elle subit 1 dégâts de plus par faiblesse et en perd 1 à la fin de son tour.
+Condition : 25 mana
+
+Cristallisation :
+Permet au mage de créer des sculptures en glaces, aussi solide que du fer (taille ~ épée courte).
+Dague, pic, reproduire une forme, … Au joueur d’exploiter son potentiel !
+Condition : 25 mana
+
+
+
+Zone de silence :
+Zone : Cercle de 6 mètres de rayon, mais le centre est plaçable à distance.
+Effet : La zone reste pendant 5 tours. Tout ce qui est dans la zone ne produit plus aucun bruit.
+Condition : 30 mana, Nécessite 2 tours complets sans interruption
+" />
 
 </androidx.core.widget.NestedScrollView>

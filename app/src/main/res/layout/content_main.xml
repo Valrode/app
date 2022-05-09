@@ -23,34 +23,47 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:foreground="@drawable/icone_state"
         android:scaleX="0.5"
         android:scaleY="1"
+        android:textColor="#FFFFFF"
         android:translationX="0dp"
         android:translationY="600dp"
+        app:iconTint="#FFFFFF"
+        app:rippleColor="#FFFFFF"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-30dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:foreground="@drawable/icone_de"
         android:scaleX="0.5"
         android:scaleY="1"
         android:translationX="100dp"
         android:translationY="600dp"
+        app:iconTint="#FFFFFF"
+        app:rippleColor="#FFFFFF"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-30dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:foreground="@drawable/image_sort"
         android:scaleX="0.5"
         android:scaleY="1"
         android:translationX="200dp"
         android:translationY="600dp"
+        app:iconTint="#FFFFFF"
+        app:rippleColor="#FFFFFF"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-30dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -59,12 +72,13 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:foreground="@drawable/notebook_icone"
         android:scaleX="0.5"
         android:scaleY="1"
         android:translationX="300dp"
         android:translationY="600dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-30dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

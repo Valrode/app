@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,11 +35,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.internal.Sleeper;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -138,7 +134,7 @@ public class MAIN extends AppCompatActivity {
             Uri Image = account.getPhotoUrl();
             ((TextView)headerView.findViewById(R.id.EmailUser)).setText(Email);
             ((TextView)headerView.findViewById(R.id.NameUser)).setText(Name);
-            ((ImageView)headerView.findViewById(R.id.ImageUser)).setImageURI(Image);
+            //((ImageView)headerView.findViewById(R.id.ImageUser)).setImageURI(Image);
         }
 
         thread.start();
@@ -254,7 +250,7 @@ public class MAIN extends AppCompatActivity {
         ArrayList<ArrayList> tempo = new ArrayList<>();
         Drawable croix = getDrawable(R.drawable.croix);
         switch (finalInc) {
-            case 2 :
+            case 3 :
                 for (int i:Ceinture) {
                     ((ImageButton) findViewById(i)).setImageDrawable(croix);
                 }
@@ -269,14 +265,16 @@ public class MAIN extends AppCompatActivity {
                         @Override
                         public void onClick(View V) {
                             Drawable IMGtemp = ((ImageButton)findViewById(IDs.get(finalInc))).getDrawable();
-                            ((ImageButton)findViewById(IDs.get(finalInc))).setImageDrawable(Drawable.createFromPath("@android:drawable/alert_dark_frame"));
                             Collier.setImageDrawable(IMGtemp);
+                            int tempID = IDs.get(5);
+                            ((ImageButton)findViewById(IDs.get(finalInc))).setImageDrawable(((ImageButton) findViewById(tempID)).getDrawable());
                             for (int i:Ceinture) {
-                                Drawable ceinture = Drawable.createFromPath("@android:drawable/ceinture.png");
+                                Drawable ceinture = getDrawable(R.drawable.ceinture);
                                 ((ImageButton) findViewById(i)).setImageDrawable(ceinture);
                             }
                             for (int i:Anneaux) {
-                                ((ImageButton) findViewById(i)).setImageDrawable(Drawable.createFromPath("@android:drawable/ringslot.png"));
+                                Drawable Anneaux = getDrawable(R.drawable.ringslots);
+                                ((ImageButton) findViewById(i)).setImageDrawable(Anneaux);
                             }
                         }
                     });
